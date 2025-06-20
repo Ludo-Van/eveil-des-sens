@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Css/style.css">
+    <script src="./Assets/Js/script.js"></script>
+    <title>Restaurant</title>
+</head>
+<body>
+    <!-- Header fixe -->
+<header>
+        <nav aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <img src="./Assets/img/logo.png" alt="Logo L'Éveil des Sens" class="logo-icon" aria-label="Logo">
+                <h1>L'ÉVEIL DES SENS</h1>
+            </a>
+            <ul class="nav-menu" id="navMenu" aria-label="Menu de navigation principal">
+                <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
+                <li><a href="restaurant.html" aria-label="Le Restaurant">Le Restaurant</a></li>
+                <li class="dropdown">
+                    <a href="carte.html" aria-label="La Carte & Menus">La Carte & Menus</a>
+                    <div class="dropdown-content">
+                        <a href="menus.html" aria-label="Menus">Menus</a>
+                        <a href="alacarte.html" aria-label="À la Carte>À la Carte">À la Carte</a>
+                        <a href="boissons.html" aria-label="Boissons">Boissons</a>
+                        <a href="desserts.html" aria-label="Desserts">Desserts</a>
+                    </div>
+                </li>
+                <li><a href="galerie.html" aria-label="Galerie">Galerie</a></li>
+                <li><a href="reservation.html" aria-label="Réservation">Réservation</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <h2>L'Éveil des Sens</h2>
+                        <p class="subtitle">"Une symphonie de saveurs authentiques dans un écrin de raffinement"</p>
+                        <a href="contact.html" class="cta-button">Nous contacter</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <h2>Gastronomie Locale</h2>
+                        <p class="subtitle">"Des produits de saison, un terroir d'exception"</p>
+                        <a href="carte.html" class="cta-button">Découvrir la carte</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide slide-3">
+                    <div class="slide-content">
+                        <h2>Excellence Culinaire</h2>
+                        <p class="subtitle">"L'art de sublimer chaque instant"</p>
+                        <a href="restaurant.html" class="cta-button">Notre histoire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+            
+            <!-- Barre de progression -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="content-section">
+        <div class="grid">
+            <div class="card">
+                <h3>Notre Philosophie</h3>
+                <p class="sans-serif">
+                    Nous croyons en une cuisine authentique qui révèle la quintessence des produits. Chaque plat raconte une histoire, 
+                    celle de producteurs passionnés, de terroirs d'exception et du savoir-faire ancestral revisité avec créativité.
+                </p>
+                <br>
+                <p class="sans-serif">
+                    Notre approche privilégie les circuits courts, les produits de saison et les techniques culinaires respectueuses 
+                    de l'environnement. Nous tissons des liens étroits avec nos producteurs locaux pour vous garantir des ingrédients 
+                    d'une fraîcheur et d'une qualité incomparables.
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3>Notre Engagement</h3>
+                <p class="sans-serif">
+                    L'Éveil des Sens s'engage dans une démarche de développement durable. Nous sélectionnons rigoureusement nos 
+                    fournisseurs selon des critères éthiques et environnementaux stricts.
+                </p>
+                <br>
+                <p class="sans-serif">
+                    Chaque geste compte : de la réduction du gaspillage alimentaire au compostage de nos déchets organiques, 
+                    en passant par l'utilisation d'énergies renouvelables. Notre mission est de préserver la planète tout en 
+                    vous offrant une expérience gastronomique d'exception.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 4rem;">Nos Valeurs</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Les Piliers de Notre Excellence</h3>
+                <ul class="values-list sans-serif">
+                    <li>
+                        🌱 <strong>Durabilité</strong> - Circuits courts et agriculture raisonnée pour préserver notre environnement
+                    </li>
+                    <li>
+                        🎯 <strong>Excellence</strong> - Recherche constante de la perfection dans chaque geste culinaire
+                    </li>
+                    <li>
+                        🤝 <strong>Convivialité</strong> - Accueil chaleureux et service personnalisé pour chaque client
+                    </li>
+                    <li>
+                        🎨 <strong>Créativité</strong> - Innovation respectueuse des traditions gastronomiques françaises
+                    </li>
+                    <li>
+                        ❤️ <strong>Passion</strong> - L'amour de la cuisine comme moteur de toutes nos actions
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Équipe -->
+    <section class="team-section" id="equipe">
+        <div class="content-section">
+            <h2 class="section-title">Notre Équipe</h2>
+            <p class="sans-serif" style="text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--text-light);">
+                Une brigade de professionnels passionnés unis par la même vision : vous offrir une expérience culinaire inoubliable.
+            </p>
+            
+            <div class="grid">
+                <div class="team-member">
+                    <div class="avatar"><img src="./Assets/img/hannibal-lecter.jpg" alt=""></div>
+                    <h4>Hannibal Lecter</h4>
+                    <p class="role">Chef Étoilé & Propriétaire</p>
+                    <p class="sans-serif">
+                        Formé dans les plus grandes maisons (Le Bristol, L'Ambroisie), Hannibal a obtenu sa première étoile Michelin en 2015. 
+                        Passionné par les produits du terroir nordiste, il sublime la gastronomie française avec créativité et respect des traditions.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar"><img src="./Assets/img/norman bates.jpg" alt=""></div>
+                    <h4>Norman Bates</h4>
+                    <p class="role">Maître d'Hôtel</p>
+                    <p class="sans-serif">
+                        Diplômée de l'École Hôtelière de Lausanne, Norman orchestre avec élégance le service en salle. 
+                        Son attention aux détails et sa connaissance parfaite de nos plats garantissent une expérience client d'exception.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar"><img src="./Assets/img/Dexter_Morgan.jpg" alt=""></div>
+                    <h4>Dexter Morgan</h4>
+                    <p class="role">Sous-Chef</p>
+                    <p class="sans-serif">
+                        Bras droit du chef Hannibal, Dexter coordonne la brigade avec précision. Son expertise technique et sa créativité 
+                        contribuent quotidiennement à l'excellence de nos créations culinaires.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar"><img src="./Assets/img/poison yvi.jpg" alt=""></div>
+                    <h4>Pamela lillian Isley</h4>
+                    <p class="role">Sommeliere</p>
+                    <p class="sans-serif">
+                        Meilleur Sommeliere de France 2018, Pamela sélectionne avec passion les vins qui subliment chaque plat. 
+                        Sa cave de plus de 800 références offre des accords mets-vins d'une rare justesse.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p class="sans-serif" style="color: var(--text-light); font-size: 1.1rem;">
+                    <strong>Notre brigade :</strong> 12 professionnels passionnés travaillent chaque jour pour votre plaisir
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Récompenses -->
+    <div class="content-section">
+        <h2 class="section-title">Nos Distinctions</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⭐ Guide Michelin</h3>
+                <p class="sans-serif">
+                    <strong>1 étoile Michelin depuis 2015</strong><br>
+                    "Une cuisine de grande qualité qui vaut le détour. Produits de première qualité, 
+                    tours de main précis, saveurs nettes et marquées."
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3>🏆 Gault & Millau</h3>
+                <p class="sans-serif">
+                    <strong>16/20 - 3 toques</strong><br>
+                    "Une table d'exception qui honore la gastronomie française avec brio. 
+                    Service impeccable et carte des vins remarquable."
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3>📰 Presse Spécialisée</h3>
+                <p class="sans-serif">
+                    <strong>Élu "Restaurant de l'Année 2023"</strong> par Le Figaro Gastronomie<br>
+                    <strong>4/5 étoiles</strong> dans Le Guide Lebey<br>
+                    <strong>Coup de cœur</strong> du Bottin Gourmand
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-main">
+            <!-- Plan du site - GAUCHE -->
+            <div class="footer-left">
+                <h4>Plan du site</h4>
+                <a href="index.html">Accueil</a>
+                <a href="restaurant.html">Le Restaurant</a>
+                <a href="carte.html">La Carte & Menus</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="reservation.html">Réservation</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <!-- Copyright - CENTRE -->
+            <div class="footer-center">
+                <p class="copyright sans-serif">&copy; Van Craeyenest ludovic SJT-2025, tous droits réservés.</p>
+            </div>
+            
+            <!-- RGPD & Mentions - DROITE -->
+            <div class="footer-right">
+                    <h4>RGPD</h4>
+                    <a href="pdcookies.html" title="Politique des cookies">Politique des cookies</a>
+                    <a href="pdconf.html" title="Politique de confidentialité">Politique de confidentialité</a>
+                    <a href="cgu.html" title="Conditions Générales d'Utilisation">CGU</a>
+                    <a href="mentions.html" title="Mentions légales">Mentions légales</a>
+                    <a href="accessibilite.html" title="Accessibilité">Accessibilité</a>
+                </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Css/style.css">
+    <title>L'Éveil des sens</title>
+</head>
+<body>
+    <!-- Header fixe -->
+<header>
+        <nav aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <img src="./Assets/img/logo.png" alt="Logo L'Éveil des Sens" class="logo-icon" aria-label="Logo">
+                <h1>L'ÉVEIL DES SENS</h1>
+            </a>
+            <ul class="nav-menu" id="navMenu" aria-label="Menu de navigation principal">
+                <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
+                <li><a href="restaurant.html" aria-label="Le Restaurant">Le Restaurant</a></li>
+                <li class="dropdown">
+                    <a href="carte.html" aria-label="La Carte & Menus">La Carte & Menus</a>
+                    <div class="dropdown-content">
+                        <a href="menus.html" aria-label="Menus">Menus</a>
+                        <a href="alacarte.html" aria-label="À la Carte>À la Carte">À la Carte</a>
+                        <a href="boissons.html" aria-label="Boissons">Boissons</a>
+                        <a href="desserts.html" aria-label="Desserts">Desserts</a>
+                    </div>
+                </li>
+                <li><a href="galerie.html" aria-label="Galerie">Galerie</a></li>
+                <li><a href="reservation.html" aria-label="Réservation">Réservation</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section avec Carousel -->
+    <section class="hero">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <h2>L'Éveil des Sens</h2>
+                        <p class="subtitle">"Une symphonie de saveurs authentiques dans un écrin de raffinement"</p>
+                        <a href="contact.html" class="cta-button">Nous contacter</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <h2>Gastronomie Locale</h2>
+                        <p class="subtitle">"Des produits de saison, un terroir d'exception"</p>
+                        <a href="carte.html" class="cta-button">Découvrir la carte</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide slide-3">
+                    <div class="slide-content">
+                        <h2>Excellence Culinaire</h2>
+                        <p class="subtitle">"L'art de sublimer chaque instant"</p>
+                        <a href="restaurant.html" class="cta-button">Notre histoire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+            
+            <!-- Barre de progression -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+
+    <!-- Section de présentation -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2>Bienvenue à L'Éveil des Sens</h2>
+            <p class="sans-serif">
+                Découvrez l'art de la haute gastronomie française dans un cadre d'exception. 
+                Notre restaurant étoilé vous invite à un voyage culinaire unique, où chaque plat 
+                raconte l'histoire de notre terroir et de notre passion pour l'excellence.
+            </p>
+            <p class="sans-serif">
+                Depuis 2010, nous perpétuons la tradition gastronomique française en sublimant 
+                les produits locaux et de saison. Notre chef étoilé et son équipe vous promettent 
+                une expérience inoubliable dans un cadre élégant et chaleureux.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sections principales -->
+    <div class="content-section">
+        <h2 class="section-title">Découvrez Notre Univers</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Notre Philosophie</h3>
+                <p class="sans-serif">
+                    Une cuisine d'exception mettant à l'honneur les produits locaux et de saison, 
+                    dans un cadre élégant et chaleureux. Découvrez notre approche unique de la 
+                    gastronomie française contemporaine.
+                </p>
+                <br>
+                <a href="restaurant.html" class="card-link">En savoir plus →</a>
+            </div>
+            
+            <div class="card">
+                <h3>Nos Menus</h3>
+                <p class="sans-serif">
+                    Découvrez nos créations culinaires, élaborées avec passion par notre chef étoilé 
+                    et son équipe talentueuse. Des menus dégustation aux plats à la carte, 
+                    laissez-vous surprendre par nos saveurs uniques.
+                </p>
+                <br>
+                <a href="carte.html" class="card-link">Voir la carte →</a>
+            </div>
+            
+            <div class="card">
+                <h3>Réservation</h3>
+                <p class="sans-serif">
+                    Réservez votre table pour vivre une expérience gastronomique inoubliable 
+                    dans notre restaurant. Service personnalisé et attention aux moindres détails 
+                    pour un moment d'exception.
+                </p>
+                <br>
+                <a href="reservation.html" class="card-link">Réserver →</a>
+            </div>
+        </div>
+
+        <div class="grid" style="margin-top: 3rem;">
+            <div class="card">
+                <h3>Notre Équipe</h3>
+                <p class="sans-serif">
+                    Rencontrez notre chef étoilé Antoine Moreau et découvrez l'équipe passionnée 
+                    qui œuvre chaque jour pour vous offrir une expérience culinaire d'exception. 
+                    Savoir-faire, créativité et tradition française.
+                </p>
+                <br>
+                <a href="restaurant.html#equipe" class="card-link">Découvrir l'équipe →</a>
+            </div>
+            
+            <div class="card">
+                <h3>Galerie Photos</h3>
+                <p class="sans-serif">
+                    Plongez dans l'ambiance raffinée de notre restaurant à travers notre galerie. 
+                    Découvrez nos créations culinaires, notre cadre élégant et l'art du dressage 
+                    qui fait notre réputation.
+                </p>
+                <br>
+                <a href="galerie.html" class="card-link">Voir la galerie →</a>
+            </div>
+            
+            <div class="card">
+                <h3>Nous Contacter</h3>
+                <p class="sans-serif">
+                    Situés au cœur de Maubeuge, nous vous accueillons du mardi au samedi. 
+                    Contactez-nous pour toute demande d'information, réservation ou 
+                    organisation d'événement privé.
+                </p>
+                <br>
+                <a href="contact.html" class="card-link">Nous contacter →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <!-- Plan du site - GAUCHE -->
+                <div class="footer-left">
+                    <h4>Plan du site</h4>
+                    <a href="index.html">Accueil</a>
+                    <a href="restaurant.html">Le Restaurant</a>
+                    <a href="carte.html">La Carte & Menus</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="reservation.html">Réservation</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <!-- Copyright - CENTRE -->
+                <div class="footer-center">
+                    <p class="copyright sans-serif">&copy; Van Craeyenest ludovic SJT-2025, tous droits réservés.</p>
+                </div>
+                
+                <!-- RGPD & Mentions - DROITE -->
+                <div class="footer-right">
+                    <h4>RGPD</h4>
+                    <a href="pdcookies.html" title="Politique des cookies">Politique des cookies</a>
+                    <a href="pdconf.html" title="Politique de confidentialité">Politique de confidentialité</a>
+                    <a href="cgu.html" title="Conditions Générales d'Utilisation">CGU</a>
+                    <a href="mentions.html" title="Mentions légales">Mentions légales</a>
+                    <a href="accessibilite.html" title="Accessibilité">Accessibilité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Assets/Js/script.js"></script>
+</body>
+</html>

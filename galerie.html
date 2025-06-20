@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Css/style.css">
+    <script src="./Assets/Js/script.js"></script>
+    <title>Galerie</title>
+</head>
+<body>
+<header>
+        <nav aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <img src="./Assets/img/logo.png" alt="Logo L'Éveil des Sens" class="logo-icon" aria-label="Logo">
+                <h1>L'ÉVEIL DES SENS</h1>
+            </a>
+            <ul class="nav-menu" id="navMenu" aria-label="Menu de navigation principal">
+                <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
+                <li><a href="restaurant.html" aria-label="Le Restaurant">Le Restaurant</a></li>
+                <li class="dropdown">
+                    <a href="carte.html" aria-label="La Carte & Menus">La Carte & Menus</a>
+                    <div class="dropdown-content">
+                        <a href="menus.html" aria-label="Menus">Menus</a>
+                        <a href="alacarte.html" aria-label="À la Carte>À la Carte">À la Carte</a>
+                        <a href="boissons.html" aria-label="Boissons">Boissons</a>
+                        <a href="desserts.html" aria-label="Desserts">Desserts</a>
+                    </div>
+                </li>
+                <li><a href="galerie.html" aria-label="Galerie">Galerie</a></li>
+                <li><a href="reservation.html" aria-label="Réservation">Réservation</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Carousel Hero Section">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <h2>L'Éveil des Sens</h2>
+                        <p class="subtitle">"Une symphonie de saveurs authentiques dans un écrin de raffinement"</p>
+                        <a href="contact.html" class="cta-button">Nous contacter</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <h2>Gastronomie Locale</h2>
+                        <p class="subtitle">"Des produits de saison, un terroir d'exception"</p>
+                        <a href="carte.html" class="cta-button">Découvrir la carte</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide slide-3">
+                    <div class="slide-content">
+                        <h2>Excellence Culinaire</h2>
+                        <p class="subtitle">"L'art de sublimer chaque instant"</p>
+                        <a href="restaurant.html" class="cta-button">Notre histoire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+            
+            <!-- Barre de progression -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+    <!-- Galerie Photos -->
+    <div class="content-section" aria-label="Galerie Photos">
+        <h2 class="section-title">Nos Créations en Images</h2>
+        <p class="sans-serif" style="text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--text-light);">
+            Découvrez l'univers raffiné de L'Éveil des Sens à travers notre galerie photographique. 
+            Chaque image raconte l'histoire de notre passion pour l'excellence culinaire.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/plat1.jpg" alt="Dressage artistique de nos plats" class="gallery-image" aria-label="Dressage artistique de nos plats">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">🍽️</span>
+                        <div class="gallery-title">Dressage Artistique</div>
+                        <div class="gallery-desc">L'art de sublimer chaque assiette</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/hannibal_cooking.jpg" alt="Notre chef en action dans les cuisines" class="gallery-image" aria-label="Notre chef en action dans les cuisines">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">👨‍🍳</span>
+                        <div class="gallery-title">Chef en Action</div>
+                        <div class="gallery-desc">La passion au cœur de la cuisine</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/restaurant.png" alt="Notre élégante salle à manger" class="gallery-image" aria-label="Notre élégante salle à manger">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">🏛️</span>
+                        <div class="gallery-title">Salle à Manger</div>
+                        <div class="gallery-desc">Élégance et raffinement</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/plat 4.jpg" alt="Nos plats signature d'exception" class="gallery-image" aria-label="Nos plats signature d'exception">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">🥘</span>
+                        <div class="gallery-title">Plats Signature</div>
+                        <div class="gallery-desc">Nos créations emblématiques</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/slidercave_99_fr.jpg" alt="Notre cave à vins d'exception" class="gallery-image" aria-label="Notre cave à vins d'exception">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">🍷</span>
+                        <div class="gallery-title">Cave à Vins</div>
+                        <div class="gallery-desc">800 références d'exception</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/brigade.jpg" alt="Notre brigade de cuisine professionnelle" class="gallery-image" aria-label="Notre brigade de cuisine professionnelle">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">👥</span>
+                        <div class="gallery-title">Notre Brigade</div>
+                        <div class="gallery-desc">Une équipe unie par la passion</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/produits-frais.jpg" alt="Sélection de produits frais de nos producteurs" class="gallery-image" aria-label="Sélection de produits frais de nos producteurs">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">🌿</span>
+                        <div class="gallery-title">Produits Frais</div>
+                        <div class="gallery-desc">Sélection de nos producteurs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item gallery-item-with-image">
+                <img src="./Assets/img/client.jpg" alt="L'ambiance feutrée de notre restaurant" class="gallery-image" aria-label="L'ambiance feutrée de notre restaurant">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="gallery-icon">✨</span>
+                        <div class="gallery-title">Ambiance Feutrée</div>
+                        <div class="gallery-desc">L'art de recevoir à la française</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Calculateur d'estimation -->
+        <div class="calculator" aria-label="Calculateur d'estimation de commande">
+            <h3>💰 Estimation de Commande</h3>
+            <p class="calc-intro sans-serif">
+                Calculez le montant approximatif de votre repas en sélectionnant vos choix. 
+                <br><strong>TVA Restauration : 5,5%</strong>
+            </p>
+            
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Menu Classics</h4>
+                    <p class="sans-serif">Entrée, Plat, Dessert - Une introduction parfaite à nos grand classics</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('menu-classics', -1)">-</button>
+                    <span class="calc-quantity" id="menu-classics-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('menu-classics', 1)">+</button>
+                    <span class="calc-price">50€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Menu Découverte</h4>
+                    <p class="sans-serif">Entrée, Plat, Dessert - Une introduction parfaite à notre univers</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('menu-decouverte', -1)">-</button>
+                    <span class="calc-quantity" id="menu-decouverte-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('menu-decouverte', 1)">+</button>
+                    <span class="calc-price">68€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Menu Dégustation "Éveil des Sens"</h4>
+                    <p class="sans-serif">7 services d'exception avec accord mets et vins</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('menu-degustation', -1)">-</button>
+                    <span class="calc-quantity" id="menu-degustation-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('menu-degustation', 1)">+</button>
+                    <span class="calc-price">125€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Menu Enfant "Petit Gastronome"</h4>
+                    <p class="sans-serif">Menu adapté spécialement conçu pour nos jeunes convives</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('menu-enfant', -1)">-</button>
+                    <span class="calc-quantity" id="menu-enfant-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('menu-enfant', 1)">+</button>
+                    <span class="calc-price">28€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Foie gras de canard mi-cuit</h4>
+                    <p class="sans-serif">Chutney de figues, pain d'épices maison</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('foie-gras', -1)">-</button>
+                    <span class="calc-quantity" id="foie-gras-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('foie-gras', 1)">+</button>
+                    <span class="calc-price">32€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Pigeon de Bresse en deux services</h4>
+                    <p class="sans-serif">Jus au vin rouge, légumes de saison</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('pigeon', -1)">-</button>
+                    <span class="calc-quantity" id="pigeon-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('pigeon', 1)">+</button>
+                    <span class="calc-price">45€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Turbot sauvage de ligne</h4>
+                    <p class="sans-serif">Beurre blanc aux herbes fraîches</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('turbot', -1)">-</button>
+                    <span class="calc-quantity" id="turbot-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('turbot', 1)">+</button>
+                    <span class="calc-price">38€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Champagne Krug Grande Cuvée</h4>
+                    <p class="sans-serif">Flûte d'exception (12cl)</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('champagne', -1)">-</button>
+                    <span class="calc-quantity" id="champagne-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('champagne', 1)">+</button>
+                    <span class="calc-price">35€</span>
+                </div>
+            </div>
+
+            <div class="calc-item">
+                <div class="calc-info">
+                    <h4>Soufflé au Grand Marnier</h4>
+                    <p class="sans-serif">Glace vanille Bourbon, préparation 20 min</p>
+                </div>
+                <div class="calc-controls">
+                    <button class="calc-btn" onclick="updateQuantity('souffle', -1)">-</button>
+                    <span class="calc-quantity" id="souffle-qty">0</span>
+                    <button class="calc-btn" onclick="updateQuantity('souffle', 1)">+</button>
+                    <span class="calc-price">16€</span>
+                </div>
+            </div>
+
+            <div class="calc-total">
+                <h4>💰 Estimation Totale</h4>
+                <div class="calc-row">
+                    <span>Montant HT :</span>
+                    <span id="total-ht">0,00 €</span>
+                </div>
+                <div class="calc-row">
+                    <span>TVA (5,5%) :</span>
+                    <span id="total-tva">0,00 €</span>
+                </div>
+                <div class="calc-row total">
+                    <span>Total TTC :</span>
+                    <span id="total-ttc">0,00 €</span>
+                </div>
+                <p class="sans-serif" style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8; text-align: center;">
+                    * Estimation indicative. Les prix peuvent varier selon la saisonnalité des produits.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section informative -->
+        <div style="background: white; padding: 2rem; border-radius: 15px; margin: 3rem 0; text-align: center;">
+            <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">📸 Nos Photos Haute Qualité</h3>
+            <p class="sans-serif" style="color: var(--text-light); max-width: 800px; margin: 0 auto;">
+                Notre galerie présente des photographies professionnelles réalisées par notre photographe culinaire attitré. 
+                Chaque cliché capture l'essence de notre art : du dressage minutieux de nos assiettes à l'ambiance chaleureuse 
+                de notre salle, en passant par les gestes précis de notre brigade en cuisine. Ces images témoignent de notre 
+                quête permanente de perfection et de beauté dans chaque détail de votre expérience gastronomique.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content" aria-label="Footer">
+        <div class="footer-main">
+            <!-- Plan du site - GAUCHE -->
+            <div class="footer-left">
+                <h4>Plan du site</h4>
+                <a href="index.html">Accueil</a>
+                <a href="restaurant.html">Le Restaurant</a>
+                <a href="carte.html">La Carte & Menus</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="reservation.html">Réservation</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <!-- Copyright - CENTRE -->
+            <div class="footer-center">
+                <p class="copyright sans-serif">&copy; Van Craeyenest ludovic SJT-2025, tous droits réservés.</p>
+            </div>
+            
+            <!-- RGPD & Mentions - DROITE -->
+            <div class="footer-right">
+                    <h4>RGPD</h4>
+                    <a href="pdcookies.html" title="Politique des cookies">Politique des cookies</a>
+                    <a href="pdconf.html" title="Politique de confidentialité">Politique de confidentialité</a>
+                    <a href="cgu.html" title="Conditions Générales d'Utilisation">CGU</a>
+                    <a href="mentions.html" title="Mentions légales">Mentions légales</a>
+                    <a href="accessibilite.html" title="Accessibilité">Accessibilité</a>
+                </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html> 

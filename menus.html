@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Css/style.css">
+    <script src="./Assets/Js/script.js"></script>
+    <title>Menus</title>
+</head>
+<body>
+<header>
+        <nav aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <img src="./Assets/img/logo.png" alt="Logo L'Éveil des Sens" class="logo-icon" aria-label="Logo">
+                <h1>L'ÉVEIL DES SENS</h1>
+            </a>
+            <ul class="nav-menu" id="navMenu" aria-label="Menu de navigation principal">
+                <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
+                <li><a href="restaurant.html" aria-label="Le Restaurant">Le Restaurant</a></li>
+                <li class="dropdown">
+                    <a href="carte.html" aria-label="La Carte & Menus">La Carte & Menus</a>
+                    <div class="dropdown-content">
+                        <a href="menus.html" aria-label="Menus">Menus</a>
+                        <a href="alacarte.html" aria-label="À la Carte>À la Carte">À la Carte</a>
+                        <a href="boissons.html" aria-label="Boissons">Boissons</a>
+                        <a href="desserts.html" aria-label="Desserts">Desserts</a>
+                    </div>
+                </li>
+                <li><a href="galerie.html" aria-label="Galerie">Galerie</a></li>
+                <li><a href="reservation.html" aria-label="Réservation">Réservation</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Section héroïque avec carrousel d'images">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <h2>L'Éveil des Sens</h2>
+                        <p class="subtitle">"Une symphonie de saveurs authentiques dans un écrin de raffinement"</p>
+                        <a href="contact.html" class="cta-button">Nous contacter</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <h2>Gastronomie Locale</h2>
+                        <p class="subtitle">"Des produits de saison, un terroir d'exception"</p>
+                        <a href="carte.html" class="cta-button">Découvrir la carte</a>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide slide-3">
+                    <div class="slide-content">
+                        <h2>Excellence Culinaire</h2>
+                        <p class="subtitle">"L'art de sublimer chaque instant"</p>
+                        <a href="restaurant.html" class="cta-button">Notre histoire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+            
+            <!-- Barre de progression -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+
+    <!-- Section Menus -->
+    <div class="content-section" aria-label="Section des menus du restaurant">
+        <section id="menus">
+            <div class="card">
+                <h3>🍽️ Nos Menus d'Exception</h3>
+                
+                <div class="menu-highlight">
+                    <h5>Une expérience culinaire orchestrée avec passion</h5>
+                    <p class="sans-serif">Nos menus sont élaborés quotidiennement selon les arrivages et la saisonnalité des produits</p>
+                </div>
+
+                <div class="menu-category" aria-label="Catégorie de menu">
+                    <h4>Menu Découverte</h4>
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h5>7 services d'exception</h5>
+                            <p class="menu-item-description sans-serif">
+                                Un voyage gastronomique complet à travers notre créativité. Amuse-bouche, 
+                                3 entrées, 2 plats, fromage et dessert avec accord mets et vins.
+                            </p>
+                        </div>
+                        <span class="menu-price">125€</span>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h4>Menu Classic</h4>
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h5>Découvrez nos grand classics</h5>
+                            <p class="menu-item-description sans-serif">
+                                Un voyage gastronomique complet à travers nos grans classics. Amuse-bouche, 
+                                3 entrées, 2 plats, fromage et dessert avec accord mets et vins.
+                            </p>
+                        </div>
+                        <span class="menu-price">100€</span>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h4>Menu Enfant "Petit Gastronome"</h4>
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h5>Entrée, Plat, Dessert adapté</h5>
+                            <p class="menu-item-description sans-serif">
+                                Spécialement conçu pour nos jeunes gastronomes avec des saveurs douces 
+                                et des présentations ludiques pour éveiller leur curiosité culinaire.
+                            </p>
+                        </div>
+                        <span class="menu-price">28€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" aria-label="Pied de page du site">
+            <div class="footer-main" aria-label="Contenu principal du pied de page">
+                <!-- Plan du site - GAUCHE -->
+                <div class="footer-left">
+                    <h4>Plan du site</h4>
+                    <a href="index.html">Accueil</a>
+                    <a href="restaurant.html">Le Restaurant</a>
+                    <a href="carte.html">La Carte & Menus</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="reservation.html">Réservation</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <!-- Copyright - CENTRE -->
+                <div class="footer-center" aria-label="Informations de copyright">
+                    <p class="copyright sans-serif">&copy; Van Craeyenest ludovic SJT-2025, tous droits réservés.</p>
+                </div>
+                
+                <!-- RGPD & Mentions - DROITE -->
+                <div class="footer-right">
+                    <h4>RGPD</h4>
+                    <a href="pdcookies.html" title="Politique des cookies">Politique des cookies</a>
+                    <a href="pdconf.html" title="Politique de confidentialité">Politique de confidentialité</a>
+                    <a href="cgu.html" title="Conditions Générales d'Utilisation">CGU</a>
+                    <a href="mentions.html" title="Mentions légales">Mentions légales</a>
+                    <a href="accessibilite.html" title="Accessibilité">Accessibilité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
